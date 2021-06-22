@@ -1,3 +1,6 @@
+
+//破题点：只有当两条路线横纵坐标相等的时候，才有可能重合
+
 #include <iostream>
 #include <algorithm>
 
