@@ -31,6 +31,13 @@ int main()
                 f[k][i1][i2] = max(f[k][i1][i2],f[k-1][i1-1][i2]+t);
                 f[k][i1][i2] = max(f[k][i1][i2],f[k-1][i1][i2-1]+t);
                 f[k][i1][i2] = max(f[k][i1][i2],f[k-1][i1][i2]+t);
+                /*改进
+                int &x = f[k][i1][i2];
+                x = max(x,f[k-1][i1-1][i2-1]+t);
+                x = max(x,f[k-1][i1-1][i2]+t);
+                x = max(x,f[k-1][i1][i2-1]+t);
+                x = max(x,f[k-1][i1][i2]+t);
+                */
             }
         }
 
