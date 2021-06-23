@@ -21,7 +21,6 @@ int main()
             for(int j=1;j<i;j++)
                 if(a[j]<a[i])
                     f[i] = max(f[i],f[j]+1);
-            
             res = max(res,f[i]);
         }
         //反向求解LIS
