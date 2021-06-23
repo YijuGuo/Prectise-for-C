@@ -3,7 +3,8 @@
 using namespace std;
 const int N =1050;
 int n;
-int a[N],f[N];
+int a[N];
+int f[N],g[N];
 int main()
 {
     scanf("%d",&n);
@@ -19,9 +20,20 @@ int main()
             f[i]=max(f[i],f[j]+1);
         }
     }
+     for(int i=n;i;i--)
+    {
+        g[i]=1;
+        for(int j=n;j>i;j--)
+        {
+            //限制条件：递增子序列 a[j]<a[i]
+            if(a[j]<a[i])
+            g[i]=max(g[i],g[j]+1);
+        }
+    }
+
     //最长子序列
     int res = 0;
-    for(int i = 1; i<=n;i++)res = max(res,f[i]);
+    for(int i = 1; i<=n;i++)res = max(res,f[i]+g[i]-1);
     printf("%d",res);
     return 0;
     
