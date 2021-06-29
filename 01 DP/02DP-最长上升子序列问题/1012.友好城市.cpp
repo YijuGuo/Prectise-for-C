@@ -23,6 +23,7 @@ int main()
         {
             if(q[j].second<q[i].second)
                 f[i] = max(f[i],f[j]+1);
+                
         }
         res = max(res,f[i]);
     }
