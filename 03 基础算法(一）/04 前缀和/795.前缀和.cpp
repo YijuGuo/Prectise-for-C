@@ -13,7 +13,7 @@ int main()
     {
         int l,r;
         scanf("%d%d",&l,&r);     
-        //注意是前l-1个数的和
+        //区间和的计算：注意是前l-1个数的和
         printf("%d\n", s[r]-s[l-1]);
     }
     
