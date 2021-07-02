@@ -18,11 +18,11 @@ int main()
 {
     cin>>n>>m>>q;
     for(int i=1;i<=n;i++)
-        for(int j=1;i<=m;j++)
+        for(int j=1;j<=m;j++)
             cin>>a[i][j];
 
     for(int i=1;i<=n;i++)
-        for(int j=1;j<=n;j++)
+        for(int j=1;j<=m;j++)
             insert(i,j,i,j,a[i][j]);
     
     while(q--)
