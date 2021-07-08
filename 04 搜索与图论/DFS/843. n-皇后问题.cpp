@@ -24,6 +24,7 @@ void dfs(int u)
         //对角线的截距
         //y=x+b, b=y-x+n (加偏移量，防止为负数)
         //y=-x+b, b=y+x
+        //行、对角线、反对角线均未放置
         if(!col[i]&&!dg[u+i]&&!udg[n-u+i])
         {
             g[u][i]='Q';
