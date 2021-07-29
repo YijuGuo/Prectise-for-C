@@ -31,3 +31,18 @@ public:
     }
 };
 
+class Solution {
+public:
+    bool hasSubtree(TreeNode* pRoot1, TreeNode* pRoot2) {
+        if(!pRoot1||!pRoot2)return false;
+        if(hasSubtree(pRoot1,pRoot2))return true;
+        return hasSubtree(pRoot1->left,pRoot2)||hasSubtree(pRoot1->right,pRoot2);
+    }
+
+    bool isSame(TreeNode* pRoot1, TreeNode* pRoot2) {
+        if(!pRoot2)return true;
+        if(!pRoot1||pRoot1->val!=pRoot2->val)return false;
+        return isSame(proot1->left,pRoot2->left)&&isSame(proot1->right,pRoot2->right);
+        
+    }
+};

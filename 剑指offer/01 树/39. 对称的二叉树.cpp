@@ -31,6 +31,13 @@
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
-        
+        //root为零时满足条件
+        //root不为零是，判断root的左子树和右子树是否呈镜像
+        return !root||dfs(root->left,root->right);
+    }
+    bool dfs(TreeNode*p , TreeNode*q)
+    {
+        if(!p||!q)return !p&&!q;
+        return p->val==q->val&&dfs(p->left,q->left)&&(p->right,q->left);
     }
 };

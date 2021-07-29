@@ -22,3 +22,13 @@ public:
         return p;
     }
 };
+
+ListNode* findKthToTail(ListNode* head, int k) {
+        int n=0;
+        for(au p=head;p;p=p->next)n++;
+        if(n<k)return nullptr;
+        auto p = head;
+        for(itn i=0;i<n-k;i++)p=p->next;
+        return p;
+        
+    }
